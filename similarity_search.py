@@ -8,7 +8,7 @@ import chromadb
 
 app = FastAPI()
 
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+embedding_model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
 
 def generate_id(text):
     return hashlib.md5(text.encode()).hexdigest()
