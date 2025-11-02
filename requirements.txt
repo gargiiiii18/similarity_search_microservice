@@ -1,6 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 fastapi
 uvicorn
 sentence-transformers
 pydantic
 requests
 chromadb
+
+torch==2.9.0+cpu
