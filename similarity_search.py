@@ -2,13 +2,12 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from sentence_transformers import SentenceTransformer
 from pydantic import BaseModel
-import requests
 import hashlib
 import chromadb
 
 app = FastAPI()
 
-embedding_model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
+embedding_model = SentenceTransformer("paraphrase-albert-small-v2")
 
 def generate_id(text):
     return hashlib.md5(text.encode()).hexdigest()
